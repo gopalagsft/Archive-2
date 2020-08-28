@@ -1,0 +1,125 @@
+<section>
+  <div class="app-body">
+    <main class="main">
+      <!-- <div class="logo">
+        <img src="assets/images/deh.jpg" alt="deh logo">
+      </div> -->
+      <div class="bg-container col-sm-11">
+        <div class="row">
+          <div class="col-md-9"></div>
+          <div class="col-md-3 text-right">
+            <small class="fa fa-sign-out back " (click)="logoutFunc()">
+              <b class="font"> Logout</b>
+            </small>
+          </div>
+        </div>
+
+        <div class="row pt-3 pb-2"> 
+          <div class="col-md-4">
+            <div class="row">
+              
+              <h5 class="text-danger dangerText">{{'identityExplorer.manage' | translate}} </h5>
+              <!-- <h5 class="text-danger dangerText" *ngIf="apiTrue">{{lang == 'en' ? this.getEnglishLang.debuglevel : this.getSpanishLang.dehendpoint}} </h5> -->
+              <!-- <div class="show">
+                Show
+              </div>
+              <div class="pageCountSelectionDiv pl-1 pr-1">
+                <select class="form-control" name="selectOptions" [(ngModel)]='maxSize' style="width:80px" #selectionRef
+                  (change)="pageCountSelection(selectionRef.value)">
+                  <option value=10>10</option>
+                  <option value=20>20</option>
+                  <option value=50>50</option>
+                  <option value=100>100</option>
+                  <option value=200>200</option>
+                  <option value=300>300</option>
+                  <option value=400>400</option>
+                  <option value=500>500</option>
+                </select>
+              </div>
+              <div class="entries">
+                Entries
+              </div> -->
+            </div>
+          </div>
+          <div class="col-md-5"></div>
+          <div class="col-md-3 p-0">
+            <div class="input-group">
+              <input type="text" class="form-control" *ngIf="!apiTrue" placeholder=" {{'identityExplorer.i.placeholder' | translate}}" [(ngModel)]="searchText" (keyup)="searchData($event)">
+              <input type="text" class="form-control" *ngIf="apiTrue" placeholder=" {{lang == 'en' || preferenceLang == 'en' ? this.getEnglishLang.search : this.getSpanishLang.search}} " [(ngModel)]="searchText" (keyup)="searchData($event)">
+              <div class="input-group-append">
+                <span class="btn btn-secondary" style="cursor: auto;">
+                  <i class="fa fa-search"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="card mb-3">
+            <div class="card-body">
+              <div class="dt-responsive table-responsive">
+                <table class="table theadtable ">
+                  <thead>
+                    <tr class="">
+                      <th style="width:10%" *ngIf="!apiTrue">{{'identityExplorer.niftitle' | translate}}</th>
+                      <th style="width:10%" *ngIf="apiTrue">{{lang == 'en' || preferenceLang == 'en' ? this.getEnglishLang.niftitle : this.getSpanishLang.niftitle}}</th>
+                      <th style="width:36%;" *ngIf="!apiTrue"><span style="cursor: pointer;" (click)="sort('legalname')">{{'identityExplorer.legalnametitle' | translate}} <i class="fa fa-sort" aria-hidden="true"></i></span></th>
+                      <th style="width:36%;" *ngIf="apiTrue"><span style="cursor: pointer;" (click)="sort('legalname')">{{lang == 'en' || preferenceLang == 'en' ? this.getEnglishLang.legalnametitle : this.getSpanishLang.legalnametitle}} <i class="fa fa-sort" aria-hidden="true"></i></span></th>
+                      <th style="width:17%" *ngIf="!apiTrue">{{'identityExplorer.representativeniftitle' | translate}}</th>
+                      <th style="width:17%" *ngIf="apiTrue">{{lang == 'en' || preferenceLang == 'en' ? this.getEnglishLang.representativeniftitle : this.getSpanishLang.representativeniftitle}}</th>
+                      <th style="width:37%;" *ngIf="!apiTrue"><span style="cursor: pointer;" (click)="sort('representative')">{{'identityExplorer.representativenametitle' | translate}} <i class="fa fa-sort" aria-hidden="true"></i></span></th>
+                      <th style="width:37%;" *ngIf="apiTrue"><span style="cursor: pointer;" (click)="sort('representative')">{{lang == 'en' || preferenceLang == 'en' ? this.getEnglishLang.representativenametitle : this.getSpanishLang.representativenametitle}} <i class="fa fa-sort" aria-hidden="true"></i></span></th>
+                    </tr>
+                  </thead>
+                </table>
+                <div class="tbodyDiv" style="height:44vh"> 
+                  <table class="table tbody table-hover mb-0">
+                    <tbody>
+                      <!-- <tr *ngFor="let t of userListData | search: searchText ;trackBy: trackByIndex;let i=index"> -->
+                      <tr *ngFor="let list of identitiesData | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize ;let i=index"
+                      [ngClass] = "{'highlight' :  selectedId === i , 'highLightRow' : selectedId === i && unmountFlag  }" (click)="changeButtonStatus();highlightRow(i);getDetails(list)">
+                        
+                        <td style="width:10%"> {{list.nif}}</td>
+                        <td style="width:36%" class="">{{list.legalname}}</td>
+                      
+                        <td style="width:17%">{{list.nifrepresentative}}</td>
+                        <td style="width:37%" class="">{{list.representative}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="text-center pt-5" *ngIf="identitiesData.length == 0">
+                    <h5>
+                      No data available
+                    </h5>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="text-center row mt-3 mb-3">
+                <div class="col-md-12 mountBtn">
+                  <!-- mount button -->
+                  <button type="button" class="" [disabled]="isButtonDisabled" (click)="mount()" *ngIf="!apiTrue && !mountFlag"> {{'identityExplorer.button.mount' | translate}}</button>
+                  <button type="button" class="" [disabled]="isButtonDisabled" (click)="mount()" *ngIf="apiTrue && mountFlag"> {{lang == 'en' || preferenceLang == 'en' ? this.getEnglishLang.mount : this.getSpanishLang.mount}} </button>
+                   <!-- unmount button -->
+                  <button type="button" class="" (click)="unmount()" *ngIf="!apiTrue && !unmountFlag"> {{'identityExplorer.button.unmount' | translate}}</button>
+                  <button type="button" class=""  (click)="unmount()" *ngIf="apiTrue && unmountFlag"> {{lang == 'en' || preferenceLang == 'en' ? this.getEnglishLang.unmount : this.getSpanishLang.unmount}} </button>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="float: right;">
+          <div>
+            <ngb-pagination *ngIf="identitiesData.length > 10"  (pageChange)="pageChanged($event)" [collectionSize]="identitiesData.length" [(page)]="page" [maxSize]="5" [rotate]="true" [ellipses]="true" [boundaryLinks]="true"></ngb-pagination>
+             
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</section>
+
+<ngx-spinner bdColor="#57577d9e" size="default" color="#ffeb3b" bdOpacity = 0.9  fullScreen = "true" color = "#ffeb3b" type="ball-spin-clockwise"></ngx-spinner>

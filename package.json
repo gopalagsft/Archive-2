@@ -1,0 +1,105 @@
+{
+  "name": "deh-online",
+  "productName": "DEH Online",
+  "version": "1.0.0",
+  "main": "main.js",
+  "description": "A DEH Application",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build --prod",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "electron": "ng build && electron .",
+    "electron-aot": "ng build --prod && electron .",
+    "built": "electron-builder",
+    "pack": "build --dir",
+    "dist": "build",
+    "deploy": "electron-builder build --win --publish always"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~8.2.3",
+    "@angular/common": "~8.2.3",
+    "@angular/compiler": "~8.2.3",
+    "@angular/core": "~8.2.3",
+    "@angular/forms": "~8.2.3",
+    "@angular/platform-browser": "~8.2.3",
+    "@angular/platform-browser-dynamic": "~8.2.3",
+    "@angular/router": "~8.2.3",
+    "@ng-bootstrap/ng-bootstrap": "^5.3.1",
+    "@ngx-translate/core": "^12.1.2",
+    "@ngx-translate/http-loader": "^4.0.0",
+    "@types/crypto-js": "^3.1.47",
+    "@types/electron": "^1.6.10",
+    "bootstrap": "^4.5.2",
+    "crypto-js": "^4.0.0",
+    "electron-updater": "^4.3.4",
+    "file-system": "^2.2.2",
+    "ngb-modal": "^2.0.3",
+    "ngx-indexed-db": "^4.0.14",
+    "ngx-pagination": "^5.0.0",
+    "ngx-spinner": "^10.0.1",
+    "rxjs": "~6.4.0",
+    "tslib": "^1.13.0",
+    "zone.js": "~0.9.1"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^0.803.29",
+    "@angular/cli": "^8.3.29",
+    "@angular/compiler-cli": "~8.2.3",
+    "@angular/language-service": "~8.2.3",
+    "@types/jasmine": "~3.3.8",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^8.10.62",
+    "codelyzer": "^5.2.2",
+    "electron": "^8.5.0",
+    "electron-builder": "^22.8.0",
+    "jasmine-core": "~3.4.0",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~4.1.0",
+    "karma-chrome-launcher": "~2.2.0",
+    "karma-coverage-istanbul-reporter": "~2.0.1",
+    "karma-jasmine": "~2.0.1",
+    "karma-jasmine-html-reporter": "^1.5.4",
+    "protractor": "^5.4.4",
+    "ts-node": "~7.0.0",
+    "tslint": "~5.15.0",
+    "typescript": "~3.5.3"
+  },
+  "build": {
+    "nsis": {
+      "installerIcon": "src/assets/icons/win/deh_resized.ico"
+    },
+    "appId": "ui-66",
+    "directories": {
+      "buildResources": "../../assets",
+      "output": "../../dist76"
+    },
+    "extraResources": {
+      "from": "../api/bin/dist/",
+      "to": "api/bin/dist/",
+      "filter": [
+        "**/*"
+      ]
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "icon": "src/assets/icons/mac/deh.icns"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "src/assets/icons/win/deh_resized.ico",
+      "publisherName": "DEH Online"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gopalagsft/deh_ui.git"
+  }
+}

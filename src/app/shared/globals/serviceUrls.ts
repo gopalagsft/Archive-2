@@ -1,0 +1,9 @@
+export const loginUrl = "login";
+export const logoutUrl = "logout";
+export const twoFaUrl = "2fa";
+export const identitiesUrl = "identities";
+export const personalizedParameterSetupUrl = "setup";
+export const forgotPasswordUrl = "forgot-password";
+//export const mountIdentitesdUrl = "mountidentities";
+export const mountIdentitesdUrl = "generatefile";
+export const APIUrl = "http://localhost:5001/";

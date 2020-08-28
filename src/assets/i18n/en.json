@@ -1,0 +1,63 @@
+{
+  "splash": {
+    "title": "Centralization agent",
+    "button": "OK",
+    "version": "0.1",
+    "disclaimer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  },
+  "login": {
+    "title": "Login",
+    "username": "Username",
+    "password": "Password",
+    "forgotPassword": "Forgot Password",
+    "gotoPreference": "Goto Preferences",
+    "button.name": "SUBMIT",
+    "l.errorModal.title": "Alert",
+    "l.errorModal.errorMsg": "Entered inputs are incorrect. Please try again",
+    "l.errorModal.button": "OK",
+    "l.blockModal.title": "User Blocked",
+    "l.blockModal.errorMsg": "Too many attempts, user Blocked",
+    "l.blockModal.button": "OK"
+  },
+  "forgotPassword": {
+    "title": "Recover Password",
+    "username": "Username",
+    "forgotpasswordLink": "Forgot your password",
+    "f.backToLoginMsg": "Already have login and password",
+    "f.backToLoginText": "Login",
+    "button.name": "SUBMIT"
+  },
+  "resetPassword": {
+    "title": "Reset Password",
+    "r.success": "Your password has been successfully changed",
+    "recoverpasswordsuccess": "Instructions have been sent to update the password",
+    "recoverpassworderror": "There was an error trying to recover your password. Please try again later",
+    "button.name": "OK"
+  },
+  "twoFA": {
+    "title": "2FA",
+    "inserCode": "Insert Code",
+    "t.error": "Please enter OTP, received on your mobile",
+    "backTo":"Back To",
+    "button.name": "VERIFY"
+  },
+  "preferences": {
+    "title": "Preferences",
+    "idiom": "Idiom",
+    "dehEndPoint": "DEH Endpoint",
+    "debugLevel": "Debug Level",
+    "button.ok": "OK",
+    "button.cancel": "CANCEL"
+  },
+  "identityExplorer": {
+    "manage": "Identities To Manage",
+    "i.placeholder": "Search",
+    "niftitle": "NIF",
+    "legalnametitle": "Legal Name",
+    "representativeniftitle": "Representative NIF",
+    "representativenametitle": "Representative Name",
+    "button.mount": "MOUNT",
+    "button.unmount": "UNMOUNT"
+  }
+
+}

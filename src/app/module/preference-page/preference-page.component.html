@@ -1,0 +1,45 @@
+<section>
+  <div class="app-body">
+    <main class="main">
+      <!-- <div class="logo">
+        <img src="assets/images/deh.jpg" alt="deh logo">
+      </div> -->
+      <div class="preference-page col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-sm-8 offset-sm-2">
+        <div class="form">
+          <form class="preference-form " autocomplete="off">
+            <div class="col-md-12 topbar">
+              <p class="mb-0 password">{{'preferences.title' | translate}}</p>
+            </div>
+            <label class="mb-1" for="idiom">{{'preferences.idiom' | translate}}</label>
+            <div class="row-fluid pb-1 pt-1 mb-3 select-style">
+              <select name="idiom" id="idiom" (change)="selectLanguage($event)">
+                <option  value="en">English</option>
+                <option selected="selected" value="es">Español</option>
+              </select>
+            </div>
+            <div class="pb-3">
+              <label class="mb-1" for="dehendpoint">{{'preferences.dehEndPoint' | translate}}</label>
+              <input type="text" autocomplete="off" [(ngModel)]="dehendpoint" name="dehEndPoint" #dehEndPoint="ngModel" id="dehendpoint" readonly/>
+            </div>
+            <label class="mb-1" for="debuglevel">{{'preferences.debugLevel' | translate}}</label>
+            <div class="row-fluid mb-4  pb-1 pt-1 select-style">
+              <select name="debuglevel" id="debugLevel" (change)="selectLevel($event)">
+                <option selected="selected" value="LOW" >LOW</option>
+                <option value="HIGH" >HIGH</option>
+              </select>
+            </div>
+            <div class="text-center row">
+              <div class="col-md-6 pb-2">
+                <button type="button" (click)="storeToLocal();useLanguage()" class="">{{'preferences.button.ok' | translate}}</button>
+              </div>
+              <div class="col-md-6">
+                <button type="button" (click)="cancel()" class="">{{'preferences.button.cancel' | translate}}</button>
+              </div>
+              <span class="clear"></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+</section>

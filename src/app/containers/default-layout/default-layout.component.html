@@ -1,0 +1,33 @@
+<header class="header">
+  <div class="logo">
+    <img src="assets/images/dehLogo.png" alt="deh logo">
+  </div>
+</header>
+
+
+<div class="languageToggle" >
+
+  <!-- <label class="lang-item" [ngStyle]="{'color':this.langLabel === 'Español' ? 'red' : 'black' }">
+    <a (click)="useLanguage()"> {{this.langLabel }} </a>
+  </label> -->
+  <div class="langToggle">
+    <label [ngClass]="{'lang1' : this.redFlag } "><a (click)="useLanguage('en')">en </a></label> |
+    <label [ngClass]="{ 'lang2' : this.blackFlag} "><a (click)="useLanguage('es')">es</a></label>
+  </div>
+
+
+  <div class="preferenceicon" title="Goto Preferences">
+    <i class="fa fa-cog gear" routerLink="/preference-page"></i>
+  </div>
+</div>
+
+
+
+<router-outlet>
+</router-outlet>
+
+<footer class="footer">
+  <div class="col-md-12 p-1">
+    2020 <i class="fa fa-registered"></i> DEH Online.es. All rights reserved.
+  </div>
+</footer>

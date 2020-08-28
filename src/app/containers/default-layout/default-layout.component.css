@@ -1,0 +1,58 @@
+
+
+/* language text */
+
+label {
+    color: rgb(0, 0, 0);
+    margin-bottom: 0;
+  }
+  
+  .languageToggle{
+    position: absolute;
+    display: inline-block;
+    z-index: 99999;
+    top: 20px;
+    right: 55px;
+    display: flex;
+  }
+
+ .languageToggle a{
+    cursor: pointer;
+ } 
+
+ .lang1{
+  color: red;
+ }
+ 
+ .lang2{
+  color: red;
+ }
+
+
+ .preferenceicon {
+  font-size: 24px;
+  color: #949494;
+  margin-left: 15px;
+}
+
+.preferenceicon .fa:hover {
+  color: rgb(227, 24, 19);
+  cursor: pointer;
+}
+
+.preferenceicon .fa:focus {
+  outline: 0;
+}
+ 
+.gear{
+  padding: 6px 8px;
+  border: 1px solid #949494;
+  border-radius: 3px;
+  font-size: 22px;
+}
+
+.langToggle{
+  padding: 4px 10px;
+  border: 1px solid #949494;
+  border-radius: 3px;
+}

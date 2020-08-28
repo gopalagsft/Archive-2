@@ -1,0 +1,137 @@
+
+
+/* .img-gradient:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 25vh;
+  display: inline-block;
+  background: -moz-linear-gradient(rgba(111, 171, 235, 0.54));
+  
+  background: -webkit-linear-gradient( rgba(111, 171, 235, 0.54));
+ 
+  background: -o-linear-gradient( rgba(111, 171, 235, 0.54));
+  
+  background: -ms-linear-gradient( rgba(111, 171, 235, 0.54));
+  
+  background: linear-gradient( rgba(111, 171, 235, 0.54));
+} */
+
+.img-gradient img {
+  display: block;
+}
+
+.login-page {
+  margin-top: 115px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.form {
+  padding: 45px;
+  box-shadow: 0 0 50px 0px #98a6c2;
+  background: #ffffff;
+}
+
+.form input {
+  outline: 0;
+  background: #e5e8ef;
+  width: 100%;
+  border: 0;
+  margin: 0 0 3px;
+  padding: 10px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 13px;
+
+}
+
+.form button {
+  text-transform: uppercase;
+  outline: 0;
+  background: rgb(227, 24, 19);
+  width: 150px;
+  border: 0;
+  padding: 10px;
+  color: #FFFFFF;
+  font-size: 13px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.form button:hover,
+.form button:active,
+.form button:focus {
+  background: #f17474;
+}
+
+.form .message {
+  margin: 5px 0px 25px;
+  text-align: right;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+
+.form .message a:hover {
+  text-decoration: underline;
+}
+
+.password {
+  font-size: 24px;
+}
+
+.topbar {
+  background: rgb(227, 24, 19);
+  padding: 10px 30px;
+  border-radius: 5px;
+  color: white;
+  margin: -65px 0 30px 0;
+}
+
+.form .message a {
+  color: rgb(227, 24, 19);
+  text-decoration: none;
+}
+
+
+
+.clear {
+  clear: both;
+}
+
+label {
+  color: #585858;
+}
+
+button:focus {
+  outline: none;
+}
+
+.btn-danger {
+  background: rgb(227, 24, 19);
+  width: 150px;
+  border: 0;
+  padding: 10px;
+}
+
+/* media query */
+
+@media screen and (max-width:500px) {
+  .app-body {
+    width: auto;
+  }
+}
+
+@media screen and (min-width:1400px) {
+  .login-page {
+    margin-top: 150px;
+  }
+}
+
+@media screen and (min-width:1025px) and (max-width:1450px) {}

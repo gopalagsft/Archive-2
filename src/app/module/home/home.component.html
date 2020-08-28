@@ -1,0 +1,88 @@
+<section>
+  <div class="app-body">
+    <main class="main">
+ 
+      <div class=" col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-sm-8 offset-sm-2 login-page">
+        <div class="form">
+          <form #signInForm="ngForm" class="login-form">
+            <div class="col-md-12 topbar">
+              <p class="mb-0 password">{{'login.title' | translate}}</p>
+            </div>
+            <div>
+              <label class="mb-1" for="users">{{'login.username' | translate}}</label>
+              <input type="text" (keyup.enter)="signIn(signInForm,$event)" id="user" [(ngModel)]="model.user" name="user" #user="ngModel"
+                required />
+              <!-- <div *ngIf="(username.touched)" class="text-danger">
+                <div *ngIf="username?.errors?.required">Email is required</div>
+              </div> -->
+            </div>
+            <div class="pt-2">
+              <label class="mb-1" for="password">{{'login.password' | translate}}</label>
+              <input type="password" [type]="isEyeClick ? 'text' : 'password'" (keyup.enter)="signIn(signInForm,$event)" id="password"
+                [(ngModel)]="model.password" name="password" #password="ngModel" required />
+              <div class="fa fa-eye " (click)="isEyeClick = !isEyeClick" [ngClass]="isEyeClick ? 'fa fa-eye' : 'fa fa-eye-slash'" style="font-size: 18px;margin-left:-30px;color:rgb(227, 24, 19)"></div>
+
+              <!-- <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+                <div *ngIf="password?.errors?.required">Password is required</div>
+              </div> -->
+            </div>
+            <p class="message col-md-12 p-0">
+              <a routerLink="/forgotPassword">{{'login.forgotPassword' | translate}}?</a>
+              
+            </p>
+            <div class="text-left row">
+              <div class="col-md-12 text-center">
+                <button type="button" class="" (click)="signIn(signInForm,$event)" [disabled]="disabled">{{'login.button.name' | translate}}</button>
+
+              </div> 
+             
+              <span class="clear"></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+</section>
+
+<!-- Alert modal -->
+<ng-template #alertModal let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLongTitle">
+      <b class="text-danger">{{'login.l.errorModal.title' | translate}}</b>
+    </h5>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click');">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <span>
+        {{'login.l.errorModal.errorMsg' | translate}}!
+    </span>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="alert(signInForm);d('Cross click');">{{'login.l.errorModal.button' | translate}}</button>
+  </div>
+</ng-template>
+
+<!-- //blockUser modal -->
+<ng-template #blockUserModal let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLongTitle">
+      <b class="text-danger">{{'login.l.blockModal.title' | translate}}</b>
+    </h5>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click');">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <span>
+        {{'login.l.blockModal.errorMsg' | translate}}!!
+    </span>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="resetFields(signInForm);d('Cross click');">{{'login.l.blockModal.button' | translate}}</button>
+  </div>
+</ng-template>
+
+<ngx-spinner bdColor="#57577d9e" size="default" color="#ffeb3b" bdOpacity = 0.9  fullScreen = "true" color = "#ffeb3b" type="ball-spin-clockwise"></ngx-spinner>

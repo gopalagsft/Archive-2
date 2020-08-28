@@ -1,0 +1,64 @@
+<section>
+  <div class="app-body">
+    <main class="main">
+      <!-- <div class="languageToggle">
+        <label class="lang-item" *ngIf="!langFlag">
+          <a (click)="useLanguage('en')">English </a>
+        </label> 
+        <label class="lang-item" *ngIf="langFlag">
+          <a (click)="useLanguage('es')">Español</a>
+        </label>
+      </div> -->
+      <div class="splash-page">
+        <div class="splash-Div">
+          <div class="splash-form" autocomplete="off">
+            <!-- <p>{{customData.custom.title}}</p>  -->
+            <div class="col-md-12">
+              <h1 class="pb-2 title ">{{'splash.title' | translate}}</h1>
+              <h5 class="text-danger mt-3 mb-3">
+                <b>Version: {{'splash.version' | translate}}</b>
+              </h5>
+              <p class="disclaimer col-lg-10 col-md-10 p-0">{{'splash.disclaimer' | translate}}</p>
+            </div>
+            <div class="text-left col-md-12 mt-5">
+              <button type="button" (click)="login()">{{'splash.button' | translate}}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</section>
+
+<!-- 
+<ng-container class="UpdateAvailable">
+  <div class="autoUpdateModal">
+    <div class="updatePopup">
+      <div class="updateText">
+          <p>A New Update Is Availavble <br>
+          Downloading Now...</p>
+      </div>
+     
+       <div class="text-center">
+        <button type="button" class="btn btn-secondary" >Close</button>
+       </div>
+    </div>
+  </div>
+</ng-container> -->
+
+<ng-container class="RestartNow">
+  <div class="autoUpdateModal">
+    <div class="updatePopup">
+      <div class="updateText">
+          <p>Update Downloaded. It will <br>
+        be installed on restart.<br>
+         Restart Now!!</p>
+      </div>
+     
+       <div class="text-center">
+        <button type="button" class="btn btn-secondary" >Close</button>
+        <button type="button" class="btn btn-danger ml-2" style="background-color: rgb(227, 24, 19);">Restart</button>
+       </div>
+    </div>
+  </div>
+</ng-container>

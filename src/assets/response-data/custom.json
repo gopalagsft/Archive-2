@@ -1,0 +1,37 @@
+{
+    "lang": {
+        "2fainsertcode": "",
+        "about": "",
+        "cancel": "",
+        "certificateexplorer": "",
+        "closesession": "",
+        "dehendpoint": "",
+        "debuglevel": "",
+        "forgotpassword": "",
+        "forgotpassmsg": "",
+        "forgotpasstitle": "",
+        "idiom": "",
+        "login": "",
+        "loginerrormsg": "",
+        "mount": "",
+        "ok": "",
+        "preferences": "",
+        "resetpass": "",
+        "search": "",
+        "signin": "",
+        "titleloginerror": "",
+        "unmount": "",
+        "userlockedmsg": "",
+        "verify": ""
+    },
+    "custom": {
+        "title": "",
+        "logo": "",
+        "icon": "",
+        "disclaimer": ""
+    },
+    "system": {
+        "dehendpoint": "",
+        "2famode": ""
+    }
+}

@@ -1,0 +1,62 @@
+{
+  "splash": {
+    "title": "Agente de centralización",
+    "button": "Okay",
+    "version": "0.1",
+    "disclaimer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat . Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  },
+  "login": {
+    "title": "Iniciar sesión",
+    "username": "Nombre de usuario",
+    "password": "Contraseña",
+    "forgotPassword": "Se te olvidó tu contraseña",
+    "gotoPreference": "Ir a preferencias",
+    "button.name": "ENVIAR",
+    "l.errorModal.title": "Alerta",
+    "l.errorModal.errorMsg": "Las entradas ingresadas son incorrectas. Inténtalo de nuevo",
+    "l.errorModal.button": "Okay",
+    "l.blockModal.title": "Usuario bloqueada",
+    "l.blockModal.errorMsg": "Demasiados intentos, usuario bloqueada",
+    "l.blockModal.button": "Okay"
+  },
+  "forgotPassword": {
+    "title": "Recuperar contraseña",
+    "username": "Nombre de usuario",
+    "forgotpasswordLink": "Olvidaste tu contraseña",
+    "f.backToLoginMsg": "Ya tengo usuario y contraseña",
+    "f.backToLoginText": "Iniciar sesión",
+    "button.name": "ENVIAR"
+  },
+  "resetPassword": {
+    "title": "Restablecer la contraseña",
+    "r.success": "su contraseña ha sido cambiada exitosamente",
+    "recoverpasswordsuccess": "Se han enviado instrucciones para actualizar la contraseña",
+    "recoverpassworderror": "Se produjo un error al intentar recuperar su contraseña. Por favor, inténtelo de nuevo más tarde",
+    "button.name": "Okay"
+  },
+  "twoFA": {
+    "title": "2FA",
+    "inserCode": "Insertar codigo",
+    "t.error": "Ingrese su OTP, recibida en su correo electrónico",
+    "backTo":" De regreso",
+    "button.name": "VERIFICAR"
+  },
+  "preferences": {
+    "title": "Preferencias",
+    "idiom": "Idioma",
+    "dehEndPoint": "Punto final de DEH",
+    "debugLevel": "Nivel de depuración",
+    "button.ok": "Okay",
+    "button.cancel": "CANCELAR"
+  },
+  "identityExplorer": {
+    "manage": "Identidades a gestionar",
+    "i.placeholder": "Buscar",
+    "niftitle": "NIF",
+    "legalnametitle": "Nombre Legal",
+    "representativeniftitle": "NIF del Representante",
+    "representativenametitle": "Nombre del Representante",
+    "button.mount": "MONTAR",
+    "button.unmount": "DESMONTAR"
+  }
+}

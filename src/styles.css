@@ -1,0 +1,171 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  font-family: 'Arial';
+}
+
+button {
+  font-weight: 700;
+}
+
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+  width: 100% !important;
+}
+
+/* .form input{
+  color: #656565;
+} */
+
+.form {
+  /* margin: 0 10px; */
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0px #bbbbbb !important;
+}
+
+.alert {
+  font-size: 14px !important;
+}
+
+.logo {
+  position: absolute;
+  display: inline-block;
+  z-index: 99999;
+  top: 45px;
+  left: 70px;
+}
+
+.logo img {
+  width: 360px;
+}
+
+.text-danger {
+  color: rgb(227, 24, 19) !important;
+}
+
+
+
+
+/* pagination css */
+
+.page-item.active .page-link {
+  background-color: #e31813;
+  border-color: #d20500;
+}
+
+.page-link {
+  color: #e31813;
+}
+
+.page-link:hover {
+  z-index: 2;
+  color: #fc6461;
+}
+
+.page-link:focus {
+  box-shadow: 0 0 0 0.2rem rgba(227, 24, 19, 0.13);
+}
+
+/* header */
+
+.header {
+  position: absolute;
+  top: 0;
+  height: 130px;
+  background: #ffffff;
+  width: 100%;
+  z-index: 9999;
+  border-bottom: 10px solid #e31813;
+}
+
+
+/* main body */
+.app-body {
+  background-color: #f5f5f5;
+  background-size: cover;
+  position: relative;
+  padding-top: 100px;
+  height: 100vh;
+  display: inline-block;
+  width: 100%;
+}
+
+
+.app-body:after {
+  content: '';
+  position: absolute;
+  top: 0px; 
+  z-index: 999;
+  right: 40px;
+  width: 100%; 
+  height: 100%;
+  display: inline-block;
+  background-image: url("src/assets/images/arrow.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+} 
+
+.main{
+  z-index: 9999;
+  position: relative;
+}
+
+/* //footer */
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  background: #e31813;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: 11px;
+  z-index: 9999;
+}
+
+/* modal */
+
+.modal-backdrop, .modal{
+  z-index: 9999;
+  background-color: #00000080;
+}
+
+
+/* modal animation */
+
+@keyframes custome-animate {
+  0% {
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(50px);
+    -moz-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: custome-animate;
+  animation-name: custome-animate;
+}
+
+@media screen and (max-width:400px) {
+  .password {
+    font-size: 22px !important;
+  }
+}
+
+
+@media screen and (min-width:1400px) {
+
+}

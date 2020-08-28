@@ -1,0 +1,44 @@
+<section>
+  <div class="app-body">
+    <main class="main">
+      <!-- <div class="logo">
+        <img src="assets/images/deh.jpg" alt="deh logo">
+      </div> -->
+      <div class="twofa-page col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-sm-8 offset-sm-2">
+        <div class="form">
+          <form class="twofa-form " #twoFaForm="ngForm" autocomplete="off" >
+            <div class="col-md-12 topbar">
+              <p class="mb-0 password">{{'twoFA.title' | translate}}</p>
+            </div>
+
+            <!-- <div class="mb-3 mt-4 alert alert-warning">
+                {{'twoFA.t.error' | translate}}
+            </div> -->
+            <div class="pb-3">
+              <label for="insertcode" class="mb-0">{{'twoFA.inserCode' | translate}}</label>
+              <!-- <label for="insertcode" *ngIf="apiTrue" class="mb-0">{{"lang == 'en' ? this.getEnglishLang.2fainsertcode : this.getSpanishLang.2fainsertcode"}}</label> -->
+
+              <input type="text" #myControl="ngModel" [(ngModel)]="model.otp" name="otp" class="otp" autocomplete="off" id="insertcode"  maxlength="6" />
+              <div  class="invalid-feedback" style="display: block;">
+                <div *ngIf="isinvalidCode">Invalid code. Please request a new one</div>
+                <div *ngIf="isCodeExpired">Code expired. Please request a new one</div>
+                <div *ngIf="isCodeFailed">Invalid code</div>
+              </div>
+            </div>
+            <div class="text-center row">
+              <div class="col-md-12">
+                <button type="submit"  class=""  (click)="verify2faCode(twoFaForm)" [disabled]="!twoFaForm.dirty">{{'twoFA.button.name' | translate}}</button>
+              </div>
+              <div class="col-md-12 mt-3">
+                <small>{{'twoFA.backTo' | translate}} <span class="text-danger backToLogin" (click)="backToLogin()">{{'login.title' | translate}}</span></small>
+              </div>
+              <span class="clear"></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+</section>
+
+<ngx-spinner bdColor="#57577d9e" size="default" color="#ffeb3b" bdOpacity = 0.9  fullScreen = "true" color = "#ffeb3b" type="ball-spin-clockwise"></ngx-spinner>
